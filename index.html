@@ -33,13 +33,19 @@
         <div class="menu2" onclick='document.getElementById("bodyText").setAttribute("hidden", "true")
                                     document.getElementById("contenidoHTML").removeAttribute("hidden")
                                     document.getElementById("demo").removeAttribute("hidden")
-                                    document.getElementById("explicacion").removeAttribute("hidden") '>
+                                    document.getElementById("explicacion").removeAttribute("hidden")
+                                    document.getElementById("atributosHTML").setAttribute("hidden", "true")
+                                    '>
             <p>Modificar contenido HTML</p>
         </div>
         <div class="menu3">
             <p>Modificar estilos CSS</p>
         </div>
-        <div class="menu4">
+        <div class="menu4" onclick='document.getElementById("bodyText").setAttribute("hidden", "true")
+                                    document.getElementById("atributosHTML").removeAttribute("hidden")
+                                    document.getElementById("demo2").removeAttribute("hidden")
+                                    document.getElementById("demo").setAttribute("hidden", "true")
+                                    document.getElementById("contenidoHTML").setAttribute("hidden", "true")'>
             <p>Modificar atributos HTML</p>
         </div>
     </nav>
@@ -62,9 +68,20 @@
         innerHTML, podemos cambiar el contenido de una etiqueta, tal que así:<br>
         <button onclick='document.getElementById("demo").innerHTML = "El texto ha cambiado"'>Cambiar</button>
     <p id="demo" class="justificado" hidden>Texto normal</p>
-    <p id="explicacion" class="justificado" hidden>Para ver el codigo utiliziado basta con dar clic derecho sobre el botón e inspeccionar
+    <p id="explicacion" class="justificado" hidden>Para ver el codigo utiliziado basta con dar clic derecho sobre el
+        botón e inspeccionar
         elemento.</p>
     </p>
+
+
+    <p id="atributosHTML" class="justificado" hidden>Al igual que con las secciones anteriores, podemos utilzar JS para
+        cambiar
+        propiedades de nuesto HTML, en este caso se trata de los atributos, los cuáles se pueden utilizar para muchas
+        cosas, pero en este caso utilizaremos el atributo hidden para ocultar un texto.
+        <button onclick='document.getElementById("demo2").setAttribute("hidden", "true")'>Ocultar</button>
+    <p id="demo2" class="justificado" hidden>Texto visible</p>
+    </p>
+
 
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
