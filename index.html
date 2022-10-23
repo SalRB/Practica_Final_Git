@@ -33,19 +33,30 @@
         <div class="menu2" onclick='document.getElementById("bodyText").setAttribute("hidden", "true")
                                     document.getElementById("contenidoHTML").removeAttribute("hidden")
                                     document.getElementById("demo").removeAttribute("hidden")
+                                    document.getElementById("demo1").setAttribute("hidden", "true")
+                                    document.getElementById("demo2").setAttribute("hidden", "true")
                                     document.getElementById("explicacion").removeAttribute("hidden")
                                     document.getElementById("atributosHTML").setAttribute("hidden", "true")
-                                    '>
+                                    document.getElementById("estilosCSS").setAttribute("hidden", "true")'>
             <p>Modificar contenido HTML</p>
         </div>
-        <div class="menu3">
+        <div class="menu3" onclick='document.getElementById("bodyText").setAttribute("hidden", "true")
+                                    document.getElementById("estilosCSS").removeAttribute("hidden")
+                                    document.getElementById("demo").setAttribute("hidden", "true")
+                                    document.getElementById("demo1").removeAttribute("hidden")
+                                    document.getElementById("demo2").setAttribute("hidden", "true")
+                                    document.getElementById("explicacion").setAttribute("hidden", "true")
+                                    document.getElementById("contenidoHTML").setAttribute("hidden", "true")'>
             <p>Modificar estilos CSS</p>
         </div>
-        <div class="menu4" onclick='document.getElementById("bodyText").setAttribute("hidden", "true")
-                                    document.getElementById("atributosHTML").removeAttribute("hidden")
-                                    document.getElementById("demo2").removeAttribute("hidden")
+        <div class="menu4" onclick='document.getElementById("atributosHTML").removeAttribute("hidden")
+                                    document.getElementById("bodyText").setAttribute("hidden", "true")
+                                    document.getElementById("contenidoHTML").setAttribute("hidden", "true")
+                                    document.getElementById("estilosCSS").setAttribute("hidden", "true")
                                     document.getElementById("demo").setAttribute("hidden", "true")
-                                    document.getElementById("contenidoHTML").setAttribute("hidden", "true")'>
+                                    document.getElementById("demo1").setAttribute("hidden", "true")
+                                    document.getElementById("demo2").removeAttribute("hidden")
+                                    document.getElementById("explicacion").setAttribute("hidden", "true")'>
             <p>Modificar atributos HTML</p>
         </div>
     </nav>
@@ -73,6 +84,14 @@
         elemento.</p>
     </p>
 
+    <!-- Esta sección cambia el CSS de la etiqueta p de abajo -->
+    <p id="estilosCSS" class="justificado" hidden>En esta sección vamos a utilizar JS no para cambiar el contenido de
+        una etiqueta si no para cambiar el estilo es esta, pudiendo cambiar su CSS con facilidad.
+        <!-- El botón aplica una cambia al tamaño de la fuente del texto -->
+        <button  onclick="document.getElementById('demo1').style.fontSize='35px'">Ocultar</button>
+        <!-- Texto sobre el que actuará el botón -->
+    <p id="demo1" class="justificado" hidden>Texto a ser modificado</p>
+    </p>
 
     <p id="atributosHTML" class="justificado" hidden>Al igual que con las secciones anteriores, podemos utilzar JS para
         cambiar
