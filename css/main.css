@@ -305,11 +305,11 @@ body {
   min-height: 500px;
 }
 
-.bodyText{
+.justificado {
   margin: 20px;
   text-align: justify;
 }
 
-footer{
+footer {
   margin-top: 700px;
 }

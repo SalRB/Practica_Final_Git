@@ -30,7 +30,10 @@
         <div class="menu1">
             <p>Home</p>
         </div>
-        <div class="menu2">
+        <div class="menu2" onclick='document.getElementById("bodyText").setAttribute("hidden", "true")
+                                    document.getElementById("contenidoHTML").removeAttribute("hidden")
+                                    document.getElementById("demo").removeAttribute("hidden")
+                                    document.getElementById("explicacion").removeAttribute("hidden") '>
             <p>Modificar contenido HTML</p>
         </div>
         <div class="menu3">
@@ -44,10 +47,24 @@
 
 <body>
 
-    <p class="bodyText">En este curso aprenderás a modificar el contenido HTML de distintas formas, entre ellas la modificación del propio
-    contenido de las etiquetas, de sus estilos o de los atributos de estas.</p>
+    <p id="bodyText" class="bodyText justificado">En este curso aprenderás a modificar el contenido HTML de distintas
+        formas, entre
+        ellas la
+        modificación del propio
+        contenido de las etiquetas, de sus estilos o de los atributos de estas.</p>
     <!-- Add your site or application content here -->
 
+    <p class="contenidoHTML justificado" id="contenidoHTML" hidden>Gracias a JavaScript, podemos alterar el contenido de
+        un
+        HTML a voluntad, ya sea tras hacer
+        clic en un botón o al pasar cierta cantidad de tiempo, las posibildades son muchas, aquí veremos un ejemplo
+        sencillo de como cambiar el contenido de una etiqueta p al hacer clic en un botón:<br><br>Gracias a la función
+        innerHTML, podemos cambiar el contenido de una etiqueta, tal que así:<br>
+        <button onclick='document.getElementById("demo").innerHTML = "El texto ha cambiado"'>Cambiar</button>
+    <p id="demo" class="justificado" hidden>Texto normal</p>
+    <p id="explicacion" class="justificado" hidden>Para ver el codigo utiliziado basta con dar clic derecho sobre el botón e inspeccionar
+        elemento.</p>
+    </p>
 
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
